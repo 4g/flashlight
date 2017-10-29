@@ -26,13 +26,15 @@ import torch.nn.functional as F
 import torch.optim as optim
 
 from dataset import get_data, decoder, check_fizbuz
-from graphing import grapher
-
+import graphing
+import time
 
 input_size = 10
 epochs = 500
 batches = 64
 lr = 0.01
+
+start_time = time.time()
 
 
 class FizBuzNet(nn.Module):
@@ -65,8 +67,8 @@ x = Variable(torch.from_numpy(trX).type(dtype), requires_grad=False)
 y = Variable(torch.from_numpy(trY).type(dtype), requires_grad=False)
 
 net = FizBuzNet(input_size, 4)
-grapher(net, x)
-exit()
+# grapher(net, x)
+# exit()
 
 loss = nn.MSELoss()
 optimizer = optim.Adam(net.parameters(), lr=lr)
@@ -102,3 +104,5 @@ for i in range(len(teX)):
 print('Test loss: ', output.data[0] / len(x))
 accuracy = hyp.data.max(1)[1] == y.data.max(1)[1]
 print('accuracy: ', accuracy.sum() / len(accuracy))
+print('total time taken', time.time() - start_time)
+# print('\n'.join(graphing.traces))
