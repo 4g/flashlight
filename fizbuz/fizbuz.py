@@ -26,15 +26,16 @@ import torch.nn.functional as F
 import torch.optim as optim
 
 from dataset import get_data, decoder, check_fizbuz
-import graphing
+from visualizer import Visualizer
 import time
 
 input_size = 10
-epochs = 500
+epochs = 12
 batches = 64
 lr = 0.01
 
 start_time = time.time()
+viz = Visualizer()
 
 
 class FizBuzNet(nn.Module):
@@ -86,6 +87,9 @@ for epoch in range(epochs):
         output.backward()
         optimizer.step()
 
+    if epoch == 10:
+        viz.round_a_loop()
+
     if epoch % 10:
         print(epoch, output.data[0])
 
@@ -105,4 +109,5 @@ print('Test loss: ', output.data[0] / len(x))
 accuracy = hyp.data.max(1)[1] == y.data.max(1)[1]
 print('accuracy: ', accuracy.sum() / len(accuracy))
 print('total time taken', time.time() - start_time)
-# print('\n'.join(graphing.traces))
+with open('out.trace', 'w+') as f:
+    f.write('\n'.join(viz.traces))
