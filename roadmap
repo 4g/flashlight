@@ -1,0 +1,4 @@
+- List out all the modules/classes/functions that needs to be in the graph as a node
+- Findout the working of pytorch tracer
+- Findout how to find the line and/or the parent class name in the user file for grouping the nodes
+- Find and store the inputs and weights
