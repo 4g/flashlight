@@ -2,6 +2,7 @@ import sys
 import linecache
 import time
 import json
+import re
 
 import torch
 
@@ -94,6 +95,7 @@ class Visualizer:
     def __init__(self, net):
         self.py_trace = []
         self.net = net
+        self.regx_op = re.compile(r'\^[a-zA-Z]+')
 
     def round_a_loop(self, x):
         sys.settrace(self._global_trace)
@@ -102,8 +104,9 @@ class Visualizer:
         self.torch_trace = str(trace)
         nodes = trace.graph().nodes()
         for node in nodes:
-            print(node.is_())
-        exit()
+            val = self.regx_op.search(str(node))
+            if val:
+                print(val.group()[1:])
 
     def _global_trace(self, frame, why, arg):
         if why == 'call':
