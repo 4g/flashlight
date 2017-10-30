@@ -30,12 +30,11 @@ from visualizer import Visualizer
 import time
 
 input_size = 10
-epochs = 12
+epochs = 500
 batches = 64
 lr = 0.01
 
 start_time = time.time()
-viz = Visualizer()
 
 
 class FizBuzNet(nn.Module):
@@ -68,8 +67,7 @@ x = Variable(torch.from_numpy(trX).type(dtype), requires_grad=False)
 y = Variable(torch.from_numpy(trY).type(dtype), requires_grad=False)
 
 net = FizBuzNet(input_size, 4)
-# grapher(net, x)
-# exit()
+viz = Visualizer(net)
 
 loss = nn.MSELoss()
 optimizer = optim.Adam(net.parameters(), lr=lr)
@@ -87,11 +85,9 @@ for epoch in range(epochs):
         output.backward()
         optimizer.step()
 
-    if epoch == 10:
-        viz.round_a_loop()
-
-    if epoch % 10:
+    if not epoch % 50:
         print(epoch, output.data[0])
+        viz.round_a_loop(x_)
 
 
 # Test

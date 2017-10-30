@@ -1,0 +1,3036 @@
+[
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+      "trace"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        212,
+        "    if kwargs is None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        213,
+        "        kwargs = {}\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        214,
+        "    if not isinstance(args, tuple):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        215,
+        "        args = (args,)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        216,
+        "    return TracedModule(f, nderivs=nderivs)(*args, **kwargs)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+      "__init__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        221,
+        "        super(TracedModule, self).__init__()\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__init__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        51,
+        "        self._backend = thnn_backend\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__setattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        307,
+        "        def remove_from(*dicts):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        312,
+        "        params = self.__dict__.get('_parameters')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        313,
+        "        if isinstance(value, Parameter):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        319,
+        "        elif params is not None and name in params:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        326,
+        "            modules = self.__dict__.get('_modules')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        327,
+        "            if isinstance(value, Module):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        333,
+        "            elif modules is not None and name in modules:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        340,
+        "                buffers = self.__dict__.get('_buffers')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        341,
+        "                if buffers is not None and name in buffers:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        348,
+        "                    object.__setattr__(self, name, value)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        52,
+        "        self._parameters = OrderedDict()\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__setattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        307,
+        "        def remove_from(*dicts):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        312,
+        "        params = self.__dict__.get('_parameters')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        313,
+        "        if isinstance(value, Parameter):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        319,
+        "        elif params is not None and name in params:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        326,
+        "            modules = self.__dict__.get('_modules')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        327,
+        "            if isinstance(value, Module):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        333,
+        "            elif modules is not None and name in modules:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        340,
+        "                buffers = self.__dict__.get('_buffers')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        341,
+        "                if buffers is not None and name in buffers:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        348,
+        "                    object.__setattr__(self, name, value)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        53,
+        "        self._buffers = OrderedDict()\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__setattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        307,
+        "        def remove_from(*dicts):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        312,
+        "        params = self.__dict__.get('_parameters')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        313,
+        "        if isinstance(value, Parameter):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        319,
+        "        elif params is not None and name in params:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        326,
+        "            modules = self.__dict__.get('_modules')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        327,
+        "            if isinstance(value, Module):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        333,
+        "            elif modules is not None and name in modules:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        340,
+        "                buffers = self.__dict__.get('_buffers')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        341,
+        "                if buffers is not None and name in buffers:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        348,
+        "                    object.__setattr__(self, name, value)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        54,
+        "        self._backward_hooks = OrderedDict()\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__setattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        307,
+        "        def remove_from(*dicts):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        312,
+        "        params = self.__dict__.get('_parameters')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        313,
+        "        if isinstance(value, Parameter):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        319,
+        "        elif params is not None and name in params:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        326,
+        "            modules = self.__dict__.get('_modules')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        327,
+        "            if isinstance(value, Module):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        333,
+        "            elif modules is not None and name in modules:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        340,
+        "                buffers = self.__dict__.get('_buffers')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        341,
+        "                if buffers is not None and name in buffers:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        348,
+        "                    object.__setattr__(self, name, value)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        55,
+        "        self._forward_hooks = OrderedDict()\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__setattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        307,
+        "        def remove_from(*dicts):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        312,
+        "        params = self.__dict__.get('_parameters')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        313,
+        "        if isinstance(value, Parameter):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        319,
+        "        elif params is not None and name in params:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        326,
+        "            modules = self.__dict__.get('_modules')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        327,
+        "            if isinstance(value, Module):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        333,
+        "            elif modules is not None and name in modules:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        340,
+        "                buffers = self.__dict__.get('_buffers')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        341,
+        "                if buffers is not None and name in buffers:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        348,
+        "                    object.__setattr__(self, name, value)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        56,
+        "        self._forward_pre_hooks = OrderedDict()\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__setattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        307,
+        "        def remove_from(*dicts):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        312,
+        "        params = self.__dict__.get('_parameters')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        313,
+        "        if isinstance(value, Parameter):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        319,
+        "        elif params is not None and name in params:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        326,
+        "            modules = self.__dict__.get('_modules')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        327,
+        "            if isinstance(value, Module):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        333,
+        "            elif modules is not None and name in modules:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        340,
+        "                buffers = self.__dict__.get('_buffers')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        341,
+        "                if buffers is not None and name in buffers:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        348,
+        "                    object.__setattr__(self, name, value)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        57,
+        "        self._modules = OrderedDict()\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__setattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        307,
+        "        def remove_from(*dicts):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        312,
+        "        params = self.__dict__.get('_parameters')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        313,
+        "        if isinstance(value, Parameter):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        319,
+        "        elif params is not None and name in params:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        326,
+        "            modules = self.__dict__.get('_modules')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        327,
+        "            if isinstance(value, Module):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        333,
+        "            elif modules is not None and name in modules:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        340,
+        "                buffers = self.__dict__.get('_buffers')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        341,
+        "                if buffers is not None and name in buffers:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        348,
+        "                    object.__setattr__(self, name, value)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        58,
+        "        self.training = True\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__setattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        307,
+        "        def remove_from(*dicts):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        312,
+        "        params = self.__dict__.get('_parameters')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        313,
+        "        if isinstance(value, Parameter):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        319,
+        "        elif params is not None and name in params:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        326,
+        "            modules = self.__dict__.get('_modules')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        327,
+        "            if isinstance(value, Module):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        333,
+        "            elif modules is not None and name in modules:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        340,
+        "                buffers = self.__dict__.get('_buffers')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        341,
+        "                if buffers is not None and name in buffers:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        348,
+        "                    object.__setattr__(self, name, value)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        225,
+        "        self.inner = inner\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__setattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        307,
+        "        def remove_from(*dicts):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        312,
+        "        params = self.__dict__.get('_parameters')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        313,
+        "        if isinstance(value, Parameter):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        319,
+        "        elif params is not None and name in params:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        326,
+        "            modules = self.__dict__.get('_modules')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        327,
+        "            if isinstance(value, Module):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        328,
+        "                if modules is None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        331,
+        "                remove_from(self.__dict__, self._parameters, self._buffers)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "remove_from"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        308,
+        "            for d in dicts:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        309,
+        "                if name in d:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        308,
+        "            for d in dicts:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        309,
+        "                if name in d:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        308,
+        "            for d in dicts:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        309,
+        "                if name in d:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        308,
+        "            for d in dicts:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        332,
+        "                modules[name] = value\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        226,
+        "        self.nderivs = nderivs\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__setattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        307,
+        "        def remove_from(*dicts):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        312,
+        "        params = self.__dict__.get('_parameters')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        313,
+        "        if isinstance(value, Parameter):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        319,
+        "        elif params is not None and name in params:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        326,
+        "            modules = self.__dict__.get('_modules')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        327,
+        "            if isinstance(value, Module):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        333,
+        "            elif modules is not None and name in modules:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        340,
+        "                buffers = self.__dict__.get('_buffers')\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        341,
+        "                if buffers is not None and name in buffers:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        348,
+        "                    object.__setattr__(self, name, value)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__call__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        261,
+        "        for hook in self._forward_pre_hooks.values():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        263,
+        "        result = self.forward(*input, **kwargs)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+      "forward"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        233,
+        "        @_raw_trace(nderivs=self.nderivs)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+      "_raw_trace"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        249,
+        "    def raw_trace(f):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        262,
+        "    return raw_trace\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+      "raw_trace"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        255,
+        "        @functools.wraps(f)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+      "wraps"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        85,
+        "    return partial(update_wrapper, wrapped=wrapped,\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        86,
+        "                   assigned=assigned, updated=updated)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        256,
+        "        def wrapper(in_vars, in_struct=None):\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+      "update_wrapper"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        59,
+        "    for attr in assigned:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        60,
+        "        try:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        61,
+        "            value = getattr(wrapped, attr)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        65,
+        "            setattr(wrapper, attr, value)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        59,
+        "    for attr in assigned:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        60,
+        "        try:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        61,
+        "            value = getattr(wrapped, attr)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        65,
+        "            setattr(wrapper, attr, value)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        59,
+        "    for attr in assigned:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        60,
+        "        try:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        61,
+        "            value = getattr(wrapped, attr)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        65,
+        "            setattr(wrapper, attr, value)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        59,
+        "    for attr in assigned:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        60,
+        "        try:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        61,
+        "            value = getattr(wrapped, attr)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        65,
+        "            setattr(wrapper, attr, value)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        59,
+        "    for attr in assigned:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        60,
+        "        try:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        61,
+        "            value = getattr(wrapped, attr)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        65,
+        "            setattr(wrapper, attr, value)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        59,
+        "    for attr in assigned:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        66,
+        "    for attr in updated:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        67,
+        "        getattr(wrapper, attr).update(getattr(wrapped, attr, {}))\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        66,
+        "    for attr in updated:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        70,
+        "    wrapper.__wrapped__ = wrapped\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/functools.py",
+        72,
+        "    return wrapper\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        261,
+        "        return wrapper\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        237,
+        "        kw_items = list(kwargs.items())\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        238,
+        "        kw_items.sort()\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        239,
+        "        in_vars, in_struct = _flatten((args, tuple(kw_items)), self.state_dict(keep_vars=True).values())\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "state_dict"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        373,
+        "        if destination is None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        374,
+        "            destination = OrderedDict()\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        375,
+        "        for name, param in self._parameters.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        378,
+        "        for name, buf in self._buffers.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        381,
+        "        for name, module in self._modules.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        382,
+        "            if module is not None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        383,
+        "                module.state_dict(destination, prefix + name + '.', keep_vars=keep_vars)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "state_dict"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        373,
+        "        if destination is None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        375,
+        "        for name, param in self._parameters.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        378,
+        "        for name, buf in self._buffers.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        381,
+        "        for name, module in self._modules.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        382,
+        "            if module is not None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        383,
+        "                module.state_dict(destination, prefix + name + '.', keep_vars=keep_vars)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "state_dict"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        373,
+        "        if destination is None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        375,
+        "        for name, param in self._parameters.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        376,
+        "            if param is not None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        377,
+        "                destination[prefix + name] = param if keep_vars else param.data\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        375,
+        "        for name, param in self._parameters.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        376,
+        "            if param is not None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        377,
+        "                destination[prefix + name] = param if keep_vars else param.data\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        375,
+        "        for name, param in self._parameters.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        378,
+        "        for name, buf in self._buffers.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        381,
+        "        for name, module in self._modules.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        384,
+        "        return destination\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        381,
+        "        for name, module in self._modules.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        382,
+        "            if module is not None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        383,
+        "                module.state_dict(destination, prefix + name + '.', keep_vars=keep_vars)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "state_dict"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        373,
+        "        if destination is None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        375,
+        "        for name, param in self._parameters.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        376,
+        "            if param is not None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        377,
+        "                destination[prefix + name] = param if keep_vars else param.data\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        375,
+        "        for name, param in self._parameters.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        376,
+        "            if param is not None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        377,
+        "                destination[prefix + name] = param if keep_vars else param.data\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        375,
+        "        for name, param in self._parameters.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        378,
+        "        for name, buf in self._buffers.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        381,
+        "        for name, module in self._modules.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        384,
+        "        return destination\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        381,
+        "        for name, module in self._modules.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        384,
+        "        return destination\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        381,
+        "        for name, module in self._modules.items():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        384,
+        "        return destination\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+      "_flatten"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        519,
+        "    obj_vars = tuple(itertools.chain(function._iter_variables(obj), params))\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "_iter"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        271,
+        "        if condition(obj):\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "<lambda>"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        317,
+        "_iter_variables = _iter_filter(lambda o: isinstance(o, torch.autograd.Variable))\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        273,
+        "        elif obj is None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        275,
+        "        elif isinstance(obj, (list, tuple)):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        276,
+        "            for o in obj:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        277,
+        "                for var in _iter(o):\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "_iter"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        271,
+        "        if condition(obj):\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "<lambda>"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        317,
+        "_iter_variables = _iter_filter(lambda o: isinstance(o, torch.autograd.Variable))\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        273,
+        "        elif obj is None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        275,
+        "        elif isinstance(obj, (list, tuple)):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        276,
+        "            for o in obj:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        277,
+        "                for var in _iter(o):\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "_iter"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        271,
+        "        if condition(obj):\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "<lambda>"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        317,
+        "_iter_variables = _iter_filter(lambda o: isinstance(o, torch.autograd.Variable))\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        272,
+        "            yield obj\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        278,
+        "                    yield var\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        278,
+        "                    yield var\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "_iter"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        277,
+        "                for var in _iter(o):\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "_iter"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        277,
+        "                for var in _iter(o):\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "_iter"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        276,
+        "            for o in obj:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        276,
+        "            for o in obj:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        277,
+        "                for var in _iter(o):\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "_iter"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        271,
+        "        if condition(obj):\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "<lambda>"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        317,
+        "_iter_variables = _iter_filter(lambda o: isinstance(o, torch.autograd.Variable))\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        273,
+        "        elif obj is None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        275,
+        "        elif isinstance(obj, (list, tuple)):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        276,
+        "            for o in obj:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        276,
+        "            for o in obj:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        520,
+        "    obj_struct = function._nested_map(lambda o: isinstance(o, Variable), lambda x: HOLE)(obj)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "_nested_map"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        256,
+        "    def _map(obj):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        266,
+        "    return _map\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "_map"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        257,
+        "        if condition(obj):\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+      "<lambda>"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        520,
+        "    obj_struct = function._nested_map(lambda o: isinstance(o, Variable), lambda x: HOLE)(obj)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        259,
+        "        elif obj is None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        261,
+        "        elif isinstance(obj, (list, tuple)):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        262,
+        "            return type(obj)(_map(x) for x in obj)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "<genexpr>"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        262,
+        "            return type(obj)(_map(x) for x in obj)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "_map"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        257,
+        "        if condition(obj):\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+      "<lambda>"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        520,
+        "    obj_struct = function._nested_map(lambda o: isinstance(o, Variable), lambda x: HOLE)(obj)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        259,
+        "        elif obj is None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        261,
+        "        elif isinstance(obj, (list, tuple)):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        262,
+        "            return type(obj)(_map(x) for x in obj)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "<genexpr>"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        262,
+        "            return type(obj)(_map(x) for x in obj)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "_map"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        257,
+        "        if condition(obj):\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+      "<lambda>"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        520,
+        "    obj_struct = function._nested_map(lambda o: isinstance(o, Variable), lambda x: HOLE)(obj)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        258,
+        "            return fn(obj)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+      "<lambda>"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        520,
+        "    obj_struct = function._nested_map(lambda o: isinstance(o, Variable), lambda x: HOLE)(obj)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "<genexpr>"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        262,
+        "            return type(obj)(_map(x) for x in obj)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "<genexpr>"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        262,
+        "            return type(obj)(_map(x) for x in obj)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "_map"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        257,
+        "        if condition(obj):\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+      "<lambda>"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        520,
+        "    obj_struct = function._nested_map(lambda o: isinstance(o, Variable), lambda x: HOLE)(obj)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        259,
+        "        elif obj is None:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        261,
+        "        elif isinstance(obj, (list, tuple)):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        262,
+        "            return type(obj)(_map(x) for x in obj)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "<genexpr>"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        262,
+        "            return type(obj)(_map(x) for x in obj)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "<genexpr>"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        262,
+        "            return type(obj)(_map(x) for x in obj)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        521,
+        "    return obj_vars, obj_struct\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        240,
+        "        trace, (out_vars, out_struct) = traced_inner(in_vars, in_struct)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+      "wrapper"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        257,
+        "            trace = torch._C._tracer_enter(in_vars, nderivs)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        258,
+        "            out_vars, out_struct = f(in_vars, in_struct)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+      "traced_inner"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        235,
+        "            return _flatten(self.inner(*args, **kwargs))\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__getattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        291,
+        "        if '_parameters' in self.__dict__:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        292,
+        "            _parameters = self.__dict__['_parameters']\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        293,
+        "            if name in _parameters:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        295,
+        "        if '_buffers' in self.__dict__:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        296,
+        "            _buffers = self.__dict__['_buffers']\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        297,
+        "            if name in _buffers:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        299,
+        "        if '_modules' in self.__dict__:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        300,
+        "            modules = self.__dict__['_modules']\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        301,
+        "            if name in modules:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        302,
+        "                return modules[name]\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__call__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        261,
+        "        for hook in self._forward_pre_hooks.values():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        263,
+        "        result = self.forward(*input, **kwargs)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "fizbuz.py",
+      "forward"
+    ],
+    "local": [
+      [
+        "fizbuz.py",
+        55,
+        "        hidden = self.hidden(batch)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__getattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        291,
+        "        if '_parameters' in self.__dict__:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        292,
+        "            _parameters = self.__dict__['_parameters']\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        293,
+        "            if name in _parameters:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        295,
+        "        if '_buffers' in self.__dict__:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        296,
+        "            _buffers = self.__dict__['_buffers']\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        297,
+        "            if name in _buffers:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        299,
+        "        if '_modules' in self.__dict__:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        300,
+        "            modules = self.__dict__['_modules']\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        301,
+        "            if name in modules:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        302,
+        "                return modules[name]\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__call__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        261,
+        "        for hook in self._forward_pre_hooks.values():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        263,
+        "        result = self.forward(*input, **kwargs)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/linear.py",
+      "forward"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/linear.py",
+        55,
+        "        return F.linear(input, self.weight, self.bias)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__getattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        291,
+        "        if '_parameters' in self.__dict__:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        292,
+        "            _parameters = self.__dict__['_parameters']\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        293,
+        "            if name in _parameters:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        294,
+        "                return _parameters[name]\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__getattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        291,
+        "        if '_parameters' in self.__dict__:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        292,
+        "            _parameters = self.__dict__['_parameters']\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        293,
+        "            if name in _parameters:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        294,
+        "                return _parameters[name]\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/functional.py",
+      "linear"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/functional.py",
+        639,
+        "    if input.dim() == 2 and bias is not None:\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+      "__getattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        65,
+        "        if name in self._fallthrough_methods:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        66,
+        "            return getattr(self.data, name)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/functional.py",
+        641,
+        "        return torch.addmm(bias, input, weight.t())\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+      "t"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        736,
+        "        if self.dim() != 2:\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+      "__getattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        65,
+        "        if name in self._fallthrough_methods:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        66,
+        "            return getattr(self.data, name)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        738,
+        "        return Transpose.apply(self, 0, 1)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/tensor.py",
+      "forward"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/tensor.py",
+        110,
+        "        result = i.transpose(dim1, dim2)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/tensor.py",
+        111,
+        "        ctx.dims = (dim1, dim2)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/tensor.py",
+        112,
+        "        ctx.mark_shared_storage((i, result))\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "mark_shared_storage"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        58,
+        "        self.shared_pairs = pairs\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/tensor.py",
+        113,
+        "        return result\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+      "addmm"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        944,
+        "            return cls._blas(Addmm, args, False)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+      "_blas"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        928,
+        "            num_args = len(args)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        929,
+        "            alpha = beta = 1\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        930,
+        "            if num_args > 5:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        932,
+        "            if num_args == 5:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        935,
+        "            elif num_args == 4:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        939,
+        "                tensors = args\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        940,
+        "            return cls.apply(*(tensors + (alpha, beta, inplace)))\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+      "forward"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+        33,
+        "        ctx.beta = beta\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+        34,
+        "        ctx.alpha = alpha\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+        35,
+        "        ctx.add_matrix_size = add_matrix.size()\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+        36,
+        "        ctx.save_for_backward(matrix1, matrix2)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "save_for_backward"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        25,
+        "        self.to_save = tensors\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+        37,
+        "        output = _get_output(ctx, add_matrix, inplace=inplace)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+      "_get_output"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+        9,
+        "    if inplace:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+        13,
+        "        return arg.new().resize_as_(arg)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/tensor.py",
+      "new"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/tensor.py",
+        18,
+        "        return self.__class__(*args, **kwargs)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+        38,
+        "        return torch.addmm(beta, add_matrix, alpha,\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+        39,
+        "                           matrix1, matrix2, out=output)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        264,
+        "        for hook in self._forward_hooks.values():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        270,
+        "        if len(self._backward_hooks) > 0:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        283,
+        "        return result\n"
+      ],
+      [
+        "fizbuz.py",
+        56,
+        "        activated = F.sigmoid(hidden)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/functional.py",
+      "sigmoid"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/functional.py",
+        623,
+        "    return _autograd_functions.Sigmoid.apply(input)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/pointwise.py",
+      "forward"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/pointwise.py",
+        96,
+        "        if inplace:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/pointwise.py",
+        100,
+        "            result = i.sigmoid()\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/pointwise.py",
+        101,
+        "        ctx.save_for_backward(result)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "save_for_backward"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        25,
+        "        self.to_save = tensors\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/pointwise.py",
+        102,
+        "        return result\n"
+      ],
+      [
+        "fizbuz.py",
+        57,
+        "        out = self.out(activated)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__getattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        291,
+        "        if '_parameters' in self.__dict__:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        292,
+        "            _parameters = self.__dict__['_parameters']\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        293,
+        "            if name in _parameters:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        295,
+        "        if '_buffers' in self.__dict__:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        296,
+        "            _buffers = self.__dict__['_buffers']\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        297,
+        "            if name in _buffers:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        299,
+        "        if '_modules' in self.__dict__:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        300,
+        "            modules = self.__dict__['_modules']\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        301,
+        "            if name in modules:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        302,
+        "                return modules[name]\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__call__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        261,
+        "        for hook in self._forward_pre_hooks.values():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        263,
+        "        result = self.forward(*input, **kwargs)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/linear.py",
+      "forward"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/linear.py",
+        55,
+        "        return F.linear(input, self.weight, self.bias)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__getattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        291,
+        "        if '_parameters' in self.__dict__:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        292,
+        "            _parameters = self.__dict__['_parameters']\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        293,
+        "            if name in _parameters:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        294,
+        "                return _parameters[name]\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+      "__getattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        291,
+        "        if '_parameters' in self.__dict__:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        292,
+        "            _parameters = self.__dict__['_parameters']\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        293,
+        "            if name in _parameters:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        294,
+        "                return _parameters[name]\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/functional.py",
+      "linear"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/functional.py",
+        639,
+        "    if input.dim() == 2 and bias is not None:\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+      "__getattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        65,
+        "        if name in self._fallthrough_methods:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        66,
+        "            return getattr(self.data, name)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/functional.py",
+        641,
+        "        return torch.addmm(bias, input, weight.t())\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+      "t"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        736,
+        "        if self.dim() != 2:\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+      "__getattr__"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        65,
+        "        if name in self._fallthrough_methods:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        66,
+        "            return getattr(self.data, name)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        738,
+        "        return Transpose.apply(self, 0, 1)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/tensor.py",
+      "forward"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/tensor.py",
+        110,
+        "        result = i.transpose(dim1, dim2)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/tensor.py",
+        111,
+        "        ctx.dims = (dim1, dim2)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/tensor.py",
+        112,
+        "        ctx.mark_shared_storage((i, result))\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "mark_shared_storage"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        58,
+        "        self.shared_pairs = pairs\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/tensor.py",
+        113,
+        "        return result\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+      "addmm"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        944,
+        "            return cls._blas(Addmm, args, False)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+      "_blas"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        928,
+        "            num_args = len(args)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        929,
+        "            alpha = beta = 1\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        930,
+        "            if num_args > 5:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        932,
+        "            if num_args == 5:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        935,
+        "            elif num_args == 4:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        939,
+        "                tensors = args\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/variable.py",
+        940,
+        "            return cls.apply(*(tensors + (alpha, beta, inplace)))\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+      "forward"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+        33,
+        "        ctx.beta = beta\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+        34,
+        "        ctx.alpha = alpha\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+        35,
+        "        ctx.add_matrix_size = add_matrix.size()\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+        36,
+        "        ctx.save_for_backward(matrix1, matrix2)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "save_for_backward"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        25,
+        "        self.to_save = tensors\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+        37,
+        "        output = _get_output(ctx, add_matrix, inplace=inplace)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+      "_get_output"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+        9,
+        "    if inplace:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+        13,
+        "        return arg.new().resize_as_(arg)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/tensor.py",
+      "new"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/tensor.py",
+        18,
+        "        return self.__class__(*args, **kwargs)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+        38,
+        "        return torch.addmm(beta, add_matrix, alpha,\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/blas.py",
+        39,
+        "                           matrix1, matrix2, out=output)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        264,
+        "        for hook in self._forward_hooks.values():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        270,
+        "        if len(self._backward_hooks) > 0:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        283,
+        "        return result\n"
+      ],
+      [
+        "fizbuz.py",
+        58,
+        "        return F.sigmoid(out)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/functional.py",
+      "sigmoid"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/functional.py",
+        623,
+        "    return _autograd_functions.Sigmoid.apply(input)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/pointwise.py",
+      "forward"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/pointwise.py",
+        96,
+        "        if inplace:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/pointwise.py",
+        100,
+        "            result = i.sigmoid()\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/pointwise.py",
+        101,
+        "        ctx.save_for_backward(result)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "save_for_backward"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        25,
+        "        self.to_save = tensors\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/_functions/pointwise.py",
+        102,
+        "        return result\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        264,
+        "        for hook in self._forward_hooks.values():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        270,
+        "        if len(self._backward_hooks) > 0:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        283,
+        "        return result\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+      "_flatten"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        519,
+        "    obj_vars = tuple(itertools.chain(function._iter_variables(obj), params))\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "_iter"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        271,
+        "        if condition(obj):\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "<lambda>"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        317,
+        "_iter_variables = _iter_filter(lambda o: isinstance(o, torch.autograd.Variable))\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        272,
+        "            yield obj\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "_iter"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        520,
+        "    obj_struct = function._nested_map(lambda o: isinstance(o, Variable), lambda x: HOLE)(obj)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "_nested_map"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        256,
+        "    def _map(obj):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        266,
+        "    return _map\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+      "_map"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        257,
+        "        if condition(obj):\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+      "<lambda>"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        520,
+        "    obj_struct = function._nested_map(lambda o: isinstance(o, Variable), lambda x: HOLE)(obj)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/autograd/function.py",
+        258,
+        "            return fn(obj)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+      "<lambda>"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        520,
+        "    obj_struct = function._nested_map(lambda o: isinstance(o, Variable), lambda x: HOLE)(obj)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        521,
+        "    return obj_vars, obj_struct\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        259,
+        "            torch._C._tracer_exit(out_vars)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        260,
+        "            return trace, (out_vars, out_struct)\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        241,
+        "        out, unmatched = _unflatten(out_vars, out_struct)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+      "_unflatten"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        506,
+        "    def unflatten_helper(input, proto):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        515,
+        "    return unflatten_helper(input, proto)\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+      "unflatten_helper"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        507,
+        "        res = []\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        508,
+        "        if not isinstance(proto, (list, tuple)):\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        509,
+        "            return input[0], input[1:]\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        242,
+        "        assert len(unmatched) == 0\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/jit/__init__.py",
+        243,
+        "        return trace, out\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        264,
+        "        for hook in self._forward_hooks.values():\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        270,
+        "        if len(self._backward_hooks) > 0:\n"
+      ],
+      [
+        "/home/hhsecond/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py",
+        283,
+        "        return result\n"
+      ]
+    ]
+  },
+  {
+    "global": [
+      "/home/hhsecond/mypro/TorchTheTorch/fizbuz/visualizer.py",
+      "_terminate_the_loop"
+    ],
+    "local": [
+      [
+        "/home/hhsecond/mypro/TorchTheTorch/fizbuz/visualizer.py",
+        69,
+        "        sys.settrace(None)\n"
+      ]
+    ]
+  }
+]
