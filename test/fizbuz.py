@@ -30,7 +30,7 @@ from visualizer import Visualizer
 import time
 
 input_size = 10
-epochs = 500
+epochs = 200
 batches = 64
 lr = 0.01
 
@@ -105,5 +105,3 @@ print('Test loss: ', output.data[0] / len(x))
 accuracy = hyp.data.max(1)[1] == y.data.max(1)[1]
 print('accuracy: ', accuracy.sum() / len(accuracy))
 print('total time taken', time.time() - start_time)
-with open('out.trace', 'w+') as f:
-    f.write('\n'.join(viz.traces))
