@@ -87,7 +87,7 @@ for epoch in range(epochs):
 
     if not epoch % 50:
         print(epoch, output.data[0])
-        viz.round_a_loop(x_)
+        viz.walk_around(x_)
 
 
 # Test

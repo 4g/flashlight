@@ -109,7 +109,7 @@ for epoch in range(epochs):
     total_loss.append(loss.data[0])
     if not epoch % 50:
         print(loss.data[0], epoch)
-        viz.round_a_loop(batch[0])
+        viz.walk_around(batch[0])
 
 # add volatile option
 testing_set = games.testing_set()
