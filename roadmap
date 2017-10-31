@@ -1,4 +1,8 @@
-- List out all the modules/classes/functions that needs to be in the graph as a node
 - Findout the working of pytorch tracer
+	- Doing operations on string output from graph().inputs and graph().outputs
 - Findout how to find the line and/or the parent class name in the user file for grouping the nodes
+	- on Going, merge line and call types together and start writing analysis programs
+	- Find the corresponding line for line - graph mapping
+	- Find the parent class for grouping
+- List out all the modules/classes/functions that needs to be in the graph as a node
 - Find and store the inputs and weights
