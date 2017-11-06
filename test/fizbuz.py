@@ -30,7 +30,7 @@ from visualizer import Visualizer
 import time
 
 input_size = 10
-epochs = 200
+epochs = 51
 batches = 64
 lr = 0.01
 
