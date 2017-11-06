@@ -2,12 +2,11 @@ import sys
 import linecache
 import time
 import json
-import re
 
 import torch
 
 
-possible_nodes = ['transpose', 'sigmoid']
+possible_nodes = {'t': 'transpose', 'addmm': 'addmm', 'sigmoid': 'sigmoid'}
 
 
 class Visualizer:
@@ -19,20 +18,50 @@ class Visualizer:
         self.py_trace = []
         self.torch_trace = []
         self.net = net
-        self.regx_op = re.compile(r'\^[a-zA-Z]+')
+
+    @staticmethod
+    def _get_user_ids(iterator):
+        out = []
+        for val in iterator:
+            out.append(val.user.unique())
+        return out
+
+    @staticmethod
+    def _get_node_ids(iterator):
+        out = []
+        for val in iterator:
+            out.append(val.unique())
+        return out
 
     def walk_around(self, x):
+        graph = {}
         sys.settrace(self._global_trace)
         trace, out = torch.jit.trace(self.net, x)
         self._got_tired()
-        graph = trace.graph()
-        print(graph)
-        inputs = list(graph.inputs())
-        nodes = list(graph.nodes())
-        for node in nodes:
-            user = node.uses()[0].user.unique()
-            whattype = node.type().scalarType()
-            size = node.type().sizes()
+        graph_from_tracer = trace.graph()
+        # TODO - remove assumption that input is always a single tensor
+        model_params = [x] + list(self.net.parameters())
+        input_nodes = list(graph_from_tracer.inputs())
+        internal_nodes = list(graph_from_tracer.nodes())
+        for meta, value in zip(input_nodes, model_params):
+            # TODO -  convert display_Values to json serailizable
+            graph[meta.unique()] = {
+                'display_values': value,
+                'display_type': 'tensor',
+                'dependancies': [],
+                'dependands': self._get_user_ids(meta.uses()),
+                'node_name': meta.kind(),
+                'datatype': meta.type().scalarType(),
+                'shape': meta.type().sizes()}
+        for node in internal_nodes:
+            graph[node.unique()] = {
+                'display_values': None,
+                'display_type': None,
+                'dependancies': self._get_node_ids(node.inputs()),
+                'dependands': self._get_user_ids(node.uses()),
+                'node_name': node.kind(),
+                'datatype': node.type().scalarType(),
+                'shape': node.type().sizes()}
 
     def _global_trace(self, frame, why, arg):
         if why == 'call':
