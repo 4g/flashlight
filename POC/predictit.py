@@ -83,7 +83,7 @@ class CricketNet(nn.Module):
         toss_decision = self.toss_embedder(batch[:, 4])
         inputs = torch.cat((team1, team2, toss_winner, host, toss_decision), dim=1)
         inputs = self.dropout(inputs)
-        a = F.selu(self.fc1(inputs))
+        a = F.relu(self.fc1(inputs))
         b = self.fc2(a)
         log_probs = F.log_softmax(b)
         return log_probs
@@ -91,7 +91,7 @@ class CricketNet(nn.Module):
 
 lr = 0.01
 batch_size = 200
-epochs = 100
+epochs = 2
 
 games = GameInfo(batch_size)
 net = CricketNet(len(games.team_to_idx), len(games.ground_to_idx))
@@ -108,11 +108,15 @@ for epoch in range(epochs):
         optimizer.step()
     total_loss.append(loss.data[0])
     if not epoch % 50:
+        pass
         print(loss.data[0], epoch)
         viz.walk_around(batch[0])
 
+# print('heeeeeeeeeeeeeey')
+# torch.onnx.export(net, batch[0], "predictit/predictit.proto", verbose=True)
+exit()
 # add volatile option
 testing_set = games.testing_set()
 log_prob = net(testing_set[0])
-print('test result')
-print((log_prob.max(1)[1] == testing_set[1]).sum().data[0] / len(testing_set[1]))
+# print('test result')
+# print((log_prob.max(1)[1] == testing_set[1]).sum().data[0] / len(testing_set[1]))

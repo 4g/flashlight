@@ -87,9 +87,10 @@ for epoch in range(epochs):
 
     if not epoch % 50:
         print(epoch, output.data[0])
-        viz.walk_around(x_)
+        # viz.walk_around(x_)
 
-
+torch.onnx.export(net, x_, "fizbuznet.proto", verbose=True)
+exit()
 # Test
 x = Variable(torch.from_numpy(teX).type(dtype), volatile=True)
 y = Variable(torch.from_numpy(teY).type(dtype), volatile=True)
