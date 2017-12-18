@@ -7,10 +7,10 @@ name = "pypi"
 
 [packages]
 
-websockets = "*"
-sanic = "*"
 "4f39215" = {path = "/home/hhsecond/mypro/pytorch", editable = true}
 "e1839a8" = {path = ".", editable = true}
+pytest = "*"
+tornado = "*"
 
 
 [dev-packages]

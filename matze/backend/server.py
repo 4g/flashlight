@@ -1,13 +1,19 @@
-from sanic import Sanic
-from sanic.response import json
-
-app = Sanic()
+import tornado.ioloop
+import tornado.web
 
 
-@app.route("/")
-async def test(request):
-    return json({"hello": "world"})
+class MainHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.write("Hello, world")
+
+
+def make_app():
+    return tornado.web.Application([
+        (r"/", MainHandler),
+    ])
 
 
 def run():
-    app.run(host="0.0.0.0", port=8000)
+    app = make_app()
+    app.listen(8888)
+    tornado.ioloop.IOLoop.current().start()
