@@ -1,0 +1,17 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+websockets = "*"
+sanic = "*"
+"4f39215" = {path = "/home/hhsecond/mypro/pytorch", editable = true}
+"e1839a8" = {path = ".", editable = true}
+
+
+[dev-packages]
+
