@@ -8,9 +8,10 @@ name = "pypi"
 [packages]
 
 "4f39215" = {path = "/home/hhsecond/mypro/pytorch", editable = true}
-"e1839a8" = {path = ".", editable = true}
 pytest = "*"
 tornado = "*"
+twine = "*"
+wheel = "*"
 
 
 [dev-packages]
