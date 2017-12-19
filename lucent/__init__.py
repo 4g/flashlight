@@ -1,1 +1,1 @@
-from light.client.main import Light
+from lucent.client.main import Lucent
