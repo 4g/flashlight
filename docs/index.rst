@@ -1,5 +1,7 @@
 ******
 Lucent
 ******
+The Visualization Tool For ONNX Models
+--------------------------------------
 
-The Visualization Tool for ONNX models
+Lucent is build to easify model interpretation easy. Lucent currently supports only PyTorch model visualization. Unlike other visualization mechaniscm, Lucent exploits PyTorch's support for dynamic graph capability to show dynamic graph creation in the browser.
