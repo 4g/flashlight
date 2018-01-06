@@ -38,6 +38,3 @@ class TestMultipleModelFiles:
         lucent_torch = Lucent(net)
         dummydata = Variable(torch.FloatTensor(1, 10))
         assert lucent_torch.show_dynamic(dummydata) is None
-
-    def test_chaining_classes(self):
-        pass
