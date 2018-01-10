@@ -1,11 +1,11 @@
-******
-Lucent
-******
+**********
+FlashLight
+**********
 The Visualization Tool For ONNX Models
 --------------------------------------
 
-Lucent is built to make model interpretation easy. Lucent currently supports only PyTorch model visualization. Unlike other visualization tools, Lucent exploits PyTorch's support for dynamic graph capability to show dynamic graph creation in the browser.
+FlashLight is built to make model interpretation easy. FlashLight currently supports only PyTorch model visualization. Unlike other visualization tools, FlashLight exploits PyTorch's support for dynamic graph capability to show dynamic graph creation in the browser.
 
 Full Documentation is available in `readthedocs`_ 
 
-.. _readthedocs: http://lucent.readthedocs.io/
+.. _readthedocs: http://flashlight.readthedocs.io/

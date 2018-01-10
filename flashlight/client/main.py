@@ -3,7 +3,7 @@ import torch
 from lucent.client.python_tracer import PythonTracer
 
 
-class Lucent:
+class FlashLight:
     """ The interface class """
     # TODO - pytorch/onnx version check
 
