@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='lucent',
+    name='flashlight',
     version='0.1.0',
     packages=find_packages(),
     entry_points={
-        'console_scripts': ['lucent = lucent.backend.server:run']},)
+        'console_scripts': ['flashlight = flashlight.backend.server:run']},)
