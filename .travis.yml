@@ -1,11 +1,26 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=7d94d67fc5648b074222dd15e493baab59faba901b4f3558f3ff967ab3c832af
+
 language: python
+
 python:
   - "3.6"
+
 before_install:
   - pip install git+https://github.com/pytorch/pytorch#egg=pytorch
   - pip install git+https://github.com/dlguys/flashlight#egg=flashlight
+
 install:
   - pip install -r requirements.txt
-# command to run tests
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
 script:
   - py.test
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
