@@ -1,6 +1,6 @@
 import torch
 
-from lucent.client.python_tracer import PythonTracer
+from flashlight.client.python_tracer import PythonTracer
 
 
 class FlashLight:
