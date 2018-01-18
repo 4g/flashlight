@@ -7,12 +7,9 @@ language: python
 python:
   - "3.6"
 
-before_install:
-  - pip install git+https://github.com/pytorch/pytorch#egg=pytorch
-  - pip install git+https://github.com/dlguys/flashlight#egg=flashlight
-
 install:
-  - pip install -r requirements.txt
+  - travis_retry pip install -r requirements.txt
+  - travis_retry python setup.py install
 
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -20,7 +17,7 @@ before_script:
   - ./cc-test-reporter before-build
 
 script:
-  - py.test --cov=flashlight
+  - py.test --cov=flashlight test/dummy_test.py
 
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
