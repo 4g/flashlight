@@ -3,8 +3,8 @@ from torch import nn
 from torch.autograd import Variable
 from flashlight import FlashLight
 
-from test.models.multiplefiles import multimain
-from test.models.singlefile import singlemain
+from models.multiplefiles import multimain
+from models.singlefile import singlemain
 
 
 class TestDirectTorchLayers:
