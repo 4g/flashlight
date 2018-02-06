@@ -17,22 +17,21 @@ class PythonTracer:
     def __exit__(self, type, value, traceback):
         sys.settrace(None)
 
-    def _create_tracehistory(self, frame, why, filename, lineno):
+    def _create_tracehistory(self, frame, why, filename):
         if why == 'call':
             code = frame.f_code
-            self.trace.append((filename, code.co_name, lineno))
+            self.trace.append((filename, code.co_name, frame.f_lineno))
         if why == "line":
             class_obj = frame.f_locals.get("self", None)
             if class_obj is not None:
                 class_name = class_obj.__class__.__name__
             else:
                 class_name = '<NO_CLASS_NAME>'
-            self.trace.append((filename, class_name, lineno))
+            self.trace.append((filename, class_name, frame.f_lineno))
 
     def _trace_callback(self, frame, why, arg):
-        lineno = frame.f_lineno
         filename = frame.f_code.co_filename
-        self._create_tracehistory(frame, why, filename, lineno)
+        self._create_tracehistory(frame, why, filename)
         if 'lucent/' not in filename:
             if '/torch/' in filename:
                 pass
