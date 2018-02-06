@@ -5,11 +5,13 @@ env:
 language: python
 
 python:
-  - "3.6"
+  - "3.4"
 
 install:
   - travis_retry pip install -r requirements.txt
-  - travis_retry python setup.py install
+  - wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1ZGd3luqwQ0rNHvFvuSosM9BPsG3cCPgB' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1ZGd3luqwQ0rNHvFvuSosM9BPsG3cCPgB" -O torch-0.4.0a0_8056399-cp34-cp34m-linux_x86_64.whl && rm -rf /tmp/cookies.txt
+  - travis_retry python -m wheel install torch-0.4.0a0_8056399-cp34-cp34m-linux_x86_64.whl
+  - travis_retry python setup.py build develop
 
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -17,7 +19,7 @@ before_script:
   - ./cc-test-reporter before-build
 
 script:
-  - py.test --cov=flashlight test/dummy_test.py
+  - py.test --cov=flashlight test
 
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
