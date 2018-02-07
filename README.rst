@@ -1,7 +1,7 @@
 **********
 FlashLight
 **********
-The Visualization Tool For ONNX Models
+The Visualization Tool For ONNX
 --------------------------------------
 
 .. image:: https://travis-ci.org/dlguys/flashlight.svg?branch=master
