@@ -1,8 +1,10 @@
 import os
 from pathlib import Path
 
+from flashlight.backend import cli
 
-FLHOME = '.flashlight'
+
 USERHOME = str(Path.home())
-BIGFILE = os.path.join(USERHOME, FLHOME, 'big.json')
-DATAFOLDER = os.path.join(USERHOME, FLHOME, 'data')
+FLHOME = cli.args.FLHOME or os.path.join(USERHOME, '.flashlight')
+BIGFILE = os.path.join(FLHOME, 'big.json')
+DATAFOLDER = os.path.join(FLHOME, 'data')
