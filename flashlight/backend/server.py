@@ -3,8 +3,7 @@ import os
 from sanic import Sanic
 from sanic.response import json
 
-from backend import utility, config
-
+from flashlight.backend import utility, config
 
 app = Sanic()
 app.static('/', '../frontend/build')
