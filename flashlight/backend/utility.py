@@ -3,7 +3,6 @@ import json
 
 
 def compact_files(folder, outfile):
-    outfile = os.path.join(folder, outfile)
     # load from outfile if exists
     try:
         with open(outfile, 'r') as f:

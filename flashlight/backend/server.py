@@ -1,10 +1,9 @@
 import os
-from pathlib import Path
 
 from sanic import Sanic
 from sanic.response import json
 
-from backend import utility
+from backend import utility, config
 
 
 app = Sanic()
@@ -13,10 +12,6 @@ app.static('/static', '../frontend/build/static')
 app.static('/static/js', '../frontend/build/static/js')
 app.static('/index', '../frontend/build/index.html')
 
-bigfile = 'big.json'
-# TODO - make it configurable
-flashlight_home = '.flashlight'
-
 
 @app.route("/")
 async def test(request):
@@ -24,12 +19,11 @@ async def test(request):
 
 
 def run(debug=False):
-    full_path = os.path.join(str(Path.home()), flashlight_home)
-    if os.path.isdir(full_path):
-        utility.compact_files(full_path, bigfile)
+    if os.path.isdir(config.DATAFOLDER):
+        utility.compact_files(config.DATAFOLDER, config.BIGFILE)
     else:
         # TODO - excpetion handling
-        os.makedirs(full_path)
+        os.makedirs(config.DATAFOLDER)
     app.run(host="0.0.0.0", port=8000, debug=debug)
 
 
