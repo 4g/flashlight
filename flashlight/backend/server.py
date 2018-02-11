@@ -5,11 +5,12 @@ from sanic.response import json
 
 from flashlight.backend import utility, config
 
+root_path = utility.get_root_path(__file__)
 app = Sanic('FlashLight_Server')
-app.static('/', '../frontend/build')
-app.static('/static', '../frontend/build/static')
-app.static('/static/js', '../frontend/build/static/js')
-app.static('/index', '../frontend/build/index.html')
+app.static('/', os.path.join(root_path, 'frontend/build'))
+app.static('/static', os.path.join(root_path, 'frontend/build/static'))
+app.static('/static/js', os.path.join(root_path, 'frontend/build/static/js'))
+app.static('/index', os.path.join(root_path, 'frontend/build/index.html'))
 
 
 @app.route("/")

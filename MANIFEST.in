@@ -1,0 +1,4 @@
+include README.rst
+recursive-include flashlight/frontend/build *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

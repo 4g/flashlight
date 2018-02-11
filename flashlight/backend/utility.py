@@ -46,6 +46,10 @@ def init_homefolder(folder, outfile):
     return True
 
 
+def get_root_path(current):
+    return os.path.dirname(os.path.dirname(os.path.realpath(current)))
+
+
 class StatusBus:
     """ Channel that keeps the status from different fucntions """
 
