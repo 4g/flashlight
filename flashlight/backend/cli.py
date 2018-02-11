@@ -7,6 +7,5 @@ parser.add_argument('--dir', help='Flashlight home directory that stores configu
     data needed to store visualization etc.', type=str, dest='FLHOME')
 args = parser.parse_args()
 
-
 if __name__ == '__main__':
     print(args)

@@ -43,6 +43,7 @@ def init_homefolder(folder, outfile):
     except PermissionError:
         print("FlashLight doesn't have permission to use it's own home, exiting...")
         return False
+    return True
 
 
 class StatusBus:
