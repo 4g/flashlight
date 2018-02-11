@@ -5,7 +5,7 @@ from sanic.response import json
 
 from flashlight.backend import utility, config
 
-app = Sanic()
+app = Sanic('FlashLight_Server')
 app.static('/', '../frontend/build')
 app.static('/static', '../frontend/build/static')
 app.static('/static/js', '../frontend/build/static/js')
@@ -18,12 +18,15 @@ async def test(request):
 
 
 def run(debug=False):
+    statusbus = utility.StatusBus()
     if os.path.isdir(config.DATAFOLDER):
-        utility.compact_files(config.DATAFOLDER, config.BIGFILE)
+        statusbus.status = utility.compact_files(config.DATAFOLDER, config.BIGFILE)
     else:
-        # TODO - excpetion handling
-        os.makedirs(config.DATAFOLDER)
-    app.run(host="0.0.0.0", port=8000, debug=debug)
+        statusbus.status = utility.init_homefolder(config.DATAFOLDER, config.BIGFILE)
+
+    if statusbus.status is True:
+        statusbus.clear()
+        app.run(host="0.0.0.0", port=8000, debug=debug)
 
 
 if __name__ == '__main__':
