@@ -8,3 +8,5 @@ USERHOME = str(Path.home())
 FLHOME = cli.args.FLHOME or os.path.join(USERHOME, '.flashlight')
 BIGFILE = os.path.join(FLHOME, 'big.json')
 DATAFOLDER = os.path.join(FLHOME, 'data')
+HOST = cli.args.HOST or '0.0.0.0'
+PORT = cli.args.PORT or '8000'

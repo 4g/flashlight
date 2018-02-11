@@ -26,7 +26,7 @@ def run(debug=False):
 
     if statusbus.status is True:
         statusbus.clear()
-        app.run(host="0.0.0.0", port=8000, debug=debug)
+        app.run(host=config.HOST, port=config.PORT, debug=debug)
 
 
 if __name__ == '__main__':
