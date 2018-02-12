@@ -1,6 +1,8 @@
 import os
 import json
 
+from sanic.log import logger
+
 
 def compact_files(folder, outfile):
     # load from outfile if exists
@@ -16,7 +18,7 @@ def compact_files(folder, outfile):
             try:
                 full.append(json.load(f))
             except json.decoder.JSONDecodeError:
-                print('FlashlightHome has files those are not JSON friendly, exiting..')
+                logger.critical("FlashLight hasn't learnt to read non-JSON files yet")
                 return False
 
     try:
@@ -29,7 +31,7 @@ def compact_files(folder, outfile):
         with open(outfile, 'w+') as f:
             json.dump(full, f)
     except PermissionError:
-        print("FlashLight doesn't have permission to use it's own home, exiting...")
+        logger.critical("PermissionDenied: FlashLight cannot use its Home :O")
         return False
 
     return True
@@ -41,9 +43,13 @@ def init_homefolder(folder, outfile):
         with open(outfile, 'w+') as f:
             json.dump([], f)
     except PermissionError:
-        print("FlashLight doesn't have permission to use it's own home, exiting...")
+        logger.critical("PermissionDenied: FlashLight cannot use its Home :O")
         return False
     return True
+
+
+def get_root_path(current):
+    return os.path.dirname(os.path.dirname(os.path.realpath(current)))
 
 
 class StatusBus:
