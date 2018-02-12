@@ -2,6 +2,7 @@ import os
 
 from sanic import Sanic
 from sanic.response import json
+from sanic.log import logger
 
 from flashlight.backend import utility, config
 
@@ -27,6 +28,7 @@ def run(debug=False):
 
     if statusbus.status is True:
         statusbus.clear()
+        logger.info('Starting FlashLight server using Sanic')
         app.run(host=config.HOST, port=config.PORT, debug=debug)
 
 
