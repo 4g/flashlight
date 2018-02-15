@@ -10,9 +10,9 @@ python:
 
 install:
   - travis_retry pip install -r requirements.txt
-  - wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1ZGd3luqwQ0rNHvFvuSosM9BPsG3cCPgB' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1ZGd3luqwQ0rNHvFvuSosM9BPsG3cCPgB" -O torch-0.4.0a0_8056399-cp34-cp34m-linux_x86_64.whl && rm -rf /tmp/cookies.txt
-  - travis_retry python -m wheel install torch-0.4.0a0_8056399-cp34-cp34m-linux_x86_64.whl
-  - travis_retry python setup.py build develop
+  - if [ $TRAVIS_PYTHON_VERSION = "3.5" ]; then travis_retry pip install http://download.pytorch.org/whl/cpu/torch-0.3.1-cp35-cp35m-linux_x86_64.whl; fi
+  - if [ $TRAVIS_PYTHON_VERSION = "3.6" ]; then travis_retry pip install http://download.pytorch.org/whl/cpu/torch-0.3.1-cp36-cp36m-linux_x86_64.whl; fi
+  - travis_retry python setup.py install
 
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -20,7 +20,7 @@ before_script:
   - ./cc-test-reporter before-build
 
 script:
-  - py.test --cov=flashlight --cov-report xml test
+  - py.test --cov=flashlight --cov-report xml tests
 
 after_script:
   - ./cc-test-reporter after-build -t coverage.py --exit-code $TRAVIS_TEST_RESULT
