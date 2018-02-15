@@ -1,7 +1,6 @@
 import os
 
 from sanic import Sanic
-from sanic.response import json
 from sanic.log import logger
 
 from flashlight.backend import utility, config
@@ -11,12 +10,7 @@ app = Sanic('FlashLight_Server')
 app.static('/', os.path.join(root_path, 'frontend/build'))
 app.static('/static', os.path.join(root_path, 'frontend/build/static'))
 app.static('/static/js', os.path.join(root_path, 'frontend/build/static/js'))
-app.static('/index', os.path.join(root_path, 'frontend/build/index.html'))
-
-
-@app.route("/")
-async def test(request):
-    return json({"hello": "world"})
+app.static('/', os.path.join(root_path, 'frontend/build/index.html'))
 
 
 def run(debug=False):
