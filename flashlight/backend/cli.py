@@ -11,14 +11,18 @@ parser = argparse.ArgumentParser(
     epilog='No more help!!')
 
 parser.add_argument(
-    '--dir', help='Flashlight home directory',
-    default=os.path.join(USERHOME, '.flashlight'), type=str, dest='FLHOME')
+    '--dir', help='FlashLight home directory',
+    default=os.path.join(USERHOME, '.FlashLight'), type=str, dest='FLHOME')
 parser.add_argument(
-    '--host', help='IP address flashlight server uses',
+    '--host', help='IP address FlashLight server uses',
     default='0.0.0.0', type=str, dest='HOST')
 parser.add_argument(
-    '--port', help='Port address flashlight server uses',
+    '--port', help='Port address FlashLight server uses',
     default='8000', type=str, dest='PORT')
+parser.add_argument(
+    '--ob', help='Open default browser on FlashLight server start',
+    action='store_true', dest='OPEN_BROWSER')
+
 args = parser.parse_args()
 
 if __name__ == '__main__':

@@ -52,7 +52,7 @@ def get_root_path(current):
     return os.path.dirname(os.path.dirname(os.path.realpath(current)))
 
 
-class StatusBus:
+class Bus:
     """ Channel that keeps the status from different fucntions """
 
     def __init__(self):

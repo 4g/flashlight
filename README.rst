@@ -12,6 +12,8 @@ The Visualization Tool For ONNX
 .. image:: https://api.codeclimate.com/v1/badges/54045484eb16f44c7c2f/test_coverage
    :target: https://codeclimate.com/github/dlguys/flashlight/test_coverage
    :alt: Test Coverage
+.. image:: http://flashlight.readthedocs.io/en/latest/?badge=latest
+	:target: http://flashlight.readthedocs.io/en/latest
 
 FlashLight is built to make model interpretation easy. FlashLight currently supports only PyTorch model visualization. Unlike other visualization tools, FlashLight exploits PyTorch's support for dynamic graph capability to show dynamic graph creation in the browser.
 
