@@ -1,4 +1,5 @@
 import os
+import webbrowser
 
 from sanic import Sanic
 from sanic.log import logger
@@ -23,6 +24,10 @@ def run(debug=False):
     if bus.status is True:
         bus.clear()
         logger.info('Starting FlashLight server using Sanic')
+        # TODO Support https
+        if config.OPEN_BROWSER:
+            url = 'http://{}:{}'.format(config.HOST, config.PORT)
+            webbrowser.open(url)
         app.run(host=config.HOST, port=config.PORT, debug=debug)
 
 
