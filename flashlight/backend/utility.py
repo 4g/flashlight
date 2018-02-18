@@ -5,6 +5,8 @@ from sanic.log import logger
 
 
 def compact_files(folder, outfile):
+    """ Compact all the files in the read directory to a single file """
+
     # load from outfile if exists
     try:
         with open(outfile, 'r') as f:
@@ -38,6 +40,8 @@ def compact_files(folder, outfile):
 
 
 def init_homefolder(folder, outfile):
+    """ Create flashlight home folder if not exists """
+
     try:
         os.makedirs(folder)
         with open(outfile, 'w+') as f:

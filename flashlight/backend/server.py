@@ -15,6 +15,8 @@ app.static('/', os.path.join(root_path, 'frontend/build/index.html'))
 
 
 def run(debug=False):
+    """ Runs the server with configurations """
+
     bus = utility.Bus()
     if os.path.isdir(config.DATAFOLDER):
         bus.status = utility.compact_files(config.DATAFOLDER, config.BIGFILE)

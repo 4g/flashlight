@@ -12,6 +12,7 @@ class FlashLight:
 
     def show_dynamic(self, x):
         """ Slow exploration but captures everything, works only in PyTorch """
+
         with PythonTracer() as pyt:
             trace, out = torch.jit.trace(self.net, x)
         for val in trace.graph().nodes():
