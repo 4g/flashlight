@@ -1,2 +1,2 @@
 # Build React
-cd flashlight/frontend && npm run build && cd ../..
+cd flashlight/frontend && ng build --prod --build-optimizer && cd ../..

@@ -8,10 +8,8 @@ from flashlight.backend import utility, config
 
 root_path = utility.get_root_path(__file__)
 app = Sanic('FlashLight_Server')
-app.static('/', os.path.join(root_path, 'frontend/build'))
-app.static('/static', os.path.join(root_path, 'frontend/build/static'))
-app.static('/static/js', os.path.join(root_path, 'frontend/build/static/js'))
-app.static('/', os.path.join(root_path, 'frontend/build/index.html'))
+app.static('/', os.path.join(root_path, 'frontend/dist'))
+app.static('/', os.path.join(root_path, 'frontend/dist/index.html'))
 
 
 def run(debug=False):
