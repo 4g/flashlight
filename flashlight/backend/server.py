@@ -7,7 +7,7 @@ from sanic.log import logger
 from flashlight.backend import utility, config
 
 root_path = utility.get_root_path(__file__)
-app = Sanic('FlashLight_Server')
+app = Sanic('FlashLightServer')
 app.static('/', os.path.join(root_path, 'frontend/dist'))
 app.static('/', os.path.join(root_path, 'frontend/dist/index.html'))
 

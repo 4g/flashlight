@@ -1,7 +1,7 @@
 **********
 FlashLight
 **********
-The Visualization Tool For ONNX
+The Visualization Tool For Your NeuralNetwork
 --------------------------------------
 
 .. image:: https://travis-ci.org/dlguys/flashlight.svg?branch=master
@@ -16,7 +16,7 @@ The Visualization Tool For ONNX
    :target: http://flashlight.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status
 
-FlashLight is built to make model interpretation easy. FlashLight currently supports only PyTorch model visualization. Unlike other visualization tools, FlashLight exploits PyTorch's support for dynamic graph capability to show dynamic graph creation in the browser.
+FlashLight is built to make model interpretation easy. Rather than just being a visualization tool we wanted to make a playground for researchers and developers to debug the neural network and playe around with the graph. FlashLight currently supports only PyTorch model visualization but we are tyring to make it compatible with GLUON and TensorFlow eager.
 
 Full Documentation is available in `readthedocs`_ 
 
