@@ -7,7 +7,6 @@ from sanic.log import logger
 from flashlight.backend import utility, config
 
 root_path = utility.get_root_path(__file__)
-
 app = Sanic('FlashLightServer')
 app.static('/', os.path.join(root_path, 'frontend/build'))
 app.static('/static', os.path.join(root_path, 'frontend/build/static'))
@@ -17,13 +16,11 @@ app.static('/', os.path.join(root_path, 'frontend/build/index.html'))
 
 def run(debug=False):
     """ Runs the server with configurations """
-
     bus = utility.Bus()
     if os.path.isdir(config.DATAFOLDER):
         bus.status = utility.compact_files(config.DATAFOLDER, config.BIGFILE)
     else:
         bus.status = utility.init_homefolder(config.DATAFOLDER, config.BIGFILE)
-
     if bus.status is True:
         bus.clear()
         logger.info('Starting FlashLight server using Sanic')

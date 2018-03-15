@@ -6,14 +6,12 @@ from sanic.log import logger
 
 def compact_files(folder, outfile):
     """ Compact all the files in the read directory to a single file """
-
     # load from outfile if exists
     try:
         with open(outfile, 'r') as f:
             full = json.load(f)
     except FileNotFoundError:
         full = []
-
     # add to outfile data
     for file in os.listdir(folder):
         with open(os.path.join(folder, file), 'r') as f:
@@ -28,7 +26,6 @@ def compact_files(folder, outfile):
         # cause data lose if user stops the process in between
         for file in os.listdir(folder):
             os.remove(os.path.join(folder, file))
-
         # writing outfile
         with open(outfile, 'w+') as f:
             json.dump(full, f)
@@ -41,7 +38,6 @@ def compact_files(folder, outfile):
 
 def init_homefolder(folder, outfile):
     """ Create flashlight home folder if not exists """
-
     try:
         os.makedirs(folder)
         with open(outfile, 'w+') as f:
@@ -49,6 +45,7 @@ def init_homefolder(folder, outfile):
     except PermissionError:
         logger.critical("PermissionDenied: FlashLight cannot use its Home :O")
         return False
+
     return True
 
 
